@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplication app</title>
+    <link rel="stylesheet" href="app2.css">
+</head>
+
+<body class="main">
+    <div class="cover">
+        <div id="menu">
+            <h1>+</h1>
+            <ul>
+                <li>
+                    <img src="./padlock.svg" alt="">
+                    <span>Habilitacion</span>
+                </li>
+                <li>
+                    <img src="./settings.svg" alt="">
+                    <span>Configuracion</span>
+                </li>
+                <li>
+
+                    <img src="./new-file.svg" alt="">
+                    <span>Agregar datos</span>
+                </li>
+                <li>
+                    <img src="./user.svg" alt="">
+                    <span>Datos del usuario</span>
+                </li>
+                <hr style="margin-bottom: 25px;">
+                <li>
+                    <img src="./turn-right.svg" alt="">
+                    <span>Cerrar sesion</span>
+                </li>
+            </ul>
+        </div>
+        <div id="fullhistorial" class="content">
+            <span>Historial</span>
+            <ul>
+                <span class="date">00:00 am</span>
+                <li></li>
+                <li></li>
+                <span class="date">00:00 am</span>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <span class="date">00:00 am</span>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div id="home" class="content">
+
+            <div class="status">
+                <div class="info">
+                    <h1 style="padding: 0 10px;">+</h1>
+                    <h1 class="money">Bs10.000</h1>
+                    <ul>
+                        <li>
+                            <img src="./padlock.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./settings.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./new-file.svg" alt="">
+                        </li>
+                        <li>
+                            <img src="./user.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="history">
+                <span>Recent historial</span>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="adcover">
+                <div class="ads">
+                    <article></article>
+                    <article class="active"></article>
+                    <article></article>
+                    <article></article>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="fullad" class="content">
+            <ul>
+                <li><img src="./portable.jpg" alt=""></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <ul class="navigation">
+            <li>
+                <img src="./turn-right.svg" alt="">
+            </li>
+            <li>
+                <img src="./home.svg" alt="">
+            </li>
+            <li>
+                <img src="./multi-tab.svg" alt="">
+            </li>
+        </ul>
+    </div>
+    <script>
+        document.querySelector('.status .info h1:nth-child(1)').addEventListener('click', function() {
+            document.querySelector('body').classList.add('menu');
+            document.querySelector('body').classList.remove('main');
+        })
+        document.querySelector('#menu h1').addEventListener('click', function() {
+            document.querySelector('body').classList.remove('menu');
+            document.querySelector('body').classList.add('main');
+        })
+        document.querySelector('.navigation li:nth-child(3)').addEventListener('click', function() {
+            document.querySelector('.cover').classList.remove('left');
+            document.querySelector('.cover').classList.add('right');
+        })
+        document.querySelector('.navigation li:nth-child(1)').addEventListener('click', function() {
+            document.querySelector('.cover').classList.remove('right');
+            document.querySelector('.cover').classList.add('left');
+        })
+        document.querySelector('.navigation li:nth-child(2)').addEventListener('click', function() {
+            document.querySelector('.cover').classList.remove('left');
+            document.querySelector('.cover').classList.remove('right');
+        })
+    </script>
+</body>
+
+</html>
